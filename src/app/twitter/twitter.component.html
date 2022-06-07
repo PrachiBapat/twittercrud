@@ -1,0 +1,68 @@
+<!-- <p>twitter works!</p> -->
+
+<div class="logo">
+  <img src="../assets/logo.png">
+
+</div>
+
+
+
+<div class="container">
+
+
+
+  <div class="form-group mt-5">
+    <label for="exampleInputEmail1">Posts</label>
+    <input type="email" [(ngModel)]="newpost" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="What's on your mind ?">
+
+  </div>
+<br/>
+
+<!-- $event predefine argument -->
+<div class="input-group mb-5">
+    <!-- multiple selection -->
+    <!-- <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" (change)="onChange($event)" multiple name="image"> -->
+    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" (change)="onChange($event)" name="image" >
+    <!-- <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04" (click)="uploadImage()">Upload</button> -->
+  </div>
+
+
+  <div class="mt-3">
+    <button class="btn btn-primary" (click)="addNewPost()">POST</button>
+  </div>
+
+  <div class="table-responsive mt-5">
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Thumbnail</th>
+      <th>Post</th>
+      <th>Actions</th>
+    </tr>
+
+    <tr *ngFor="let post of posts">
+      <td width="5%">{{ post.ID }}</td>
+      <td><img [src]="'http://localhost:4400/' + post.thumbnail" class="thumbnail"></td>
+      <td>{{ post.post }}</td>
+      <td width="15%">
+        <button (click)="editPost(post.ID)" class="btn btn-primary" >Edit</button> &nbsp; &nbsp;
+        <br/>
+        <br/>
+        <button class="btn btn-primary" (click)="deletePost(post.ID)">Delete</button>
+      </td>
+    </tr>
+
+  </table>
+  </div>
+
+
+    <!-- <div *ngFor="let post of posts">
+      {{post.ID}} - {{ post.post }}
+      <button (click)="editPost(post.ID)" class="btn btn-primary" >Edit</button>
+      <button class="btn btn-secondary" (click)="deletePost(post.ID)">Delete</button>
+    </div> -->
+
+  </div>
+
+  <form action="" ></form>
+

@@ -1,0 +1,43 @@
+
+.logo{
+  width: 20px;
+  height: 20px;
+}
+
+
+.postText{
+  min-height: 400px;
+}
+
+.btn-primary{
+  background-color: #0d6efd !important;
+  margin-left: 304px;
+}
+
+.btn-primary1{
+  background-color: #0d6efd !important;
+  margin-left:-1px;
+  color: #fff;
+
+}
+
+.thumbnail{
+  max-width:500px;
+}
+
+
+@keyframes fadein{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity:1;
+  }
+}
+
+.fadein{
+
+  animation: fadein;
+
+}
